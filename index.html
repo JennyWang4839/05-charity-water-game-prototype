@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Charity Water Escape Room Game</h1>
+    <div id="intro">
+      <h1>Charity Water Escape Room Game</h1>
+    </div>
 
     <div id="room1" class="room">
         <h2>Bedroom</h2>
@@ -17,14 +19,9 @@
         <img src="img/bedroom.png" alt="Bedroom" class="room">
 
         <div class="objects">
-          <button id="pillow" onclick="clickedPillow()"></button>
+          <button id="pillow"></button>
 
-          <button id="painting" onclick="clickedPainting()"></button>
-
-          <div id="code" class="hidden">
-            Code is World Water Day
-          </div>
-
+          <button id="painting"></button>
         </div>
 
         <button onclick="nextRoom()">Go to Bedroom</button>
@@ -38,8 +35,14 @@
         <button onclick="closeInventory()">Close</button>
     </div>
 
-    <script src="script.js"></script>
+    <div id="popup" class="popup hidden">
+      <h3>You found a note!</h3>
 
-    
+      <p>Code: World Water Day</p>
+
+      <button id="collectCode" class="addToInventory" onclick="addToInventory('Code: World Water Day')">Take</button>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>

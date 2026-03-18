@@ -7,70 +7,6 @@ let keyFound = false
 
 const sidebar = document.getElementById("inventorySidebar");
 
-function updateInventory(){
-    let list = document.getElementById("inventoryList")
-    list.innerHTML = ""
-
-    inventory.forEach(item =>{
-        let li = document.createElement("li")
-        li.textContent = item
-        list.appendChild(li)
-    })
-}
-
-function inspect(object){
-
-    let description = document.getElementById("description")
-
-    if(object === "desk"){
-
-        if(!keyFound){
-            description.textContent =
-            "You open the desk drawer and find a small key! 🔑"
-
-            inventory.push("Key")
-            keyFound = true
-            updateInventory()
-        }
-
-        else{
-            description.textContent =
-            "The desk drawer is empty."
-        }
-    }
-
-    if(object === "painting"){
-        description.textContent =
-        "Behind the painting is a message: 'The key opens the door.'"
-    }
-
-    if(object === "door"){
-
-        if(inventory.includes("Key")){
-            description.textContent =
-            "You unlock the door and escape! 🎉"
-        }
-
-        else{
-            description.textContent =
-            "The door is locked."
-        }
-
-    }
-}
-
-function updateInventory(){
-  let list = document.getElementById("inventoryList")
-  
-  list.innerHTML = ""
-
-  inventory.forEach(item =>{
-    let li = document.createElement("li")
-      li.textContent = item
-      list.appendChild(li)
-  })
-}
-
 function openInventory(){
   const inventory = document.getElementById("inventory");
 
@@ -93,4 +29,40 @@ function closeInventory(){
   else {
       inventory.style.display = "block";
   }
+};
+
+function addToInventory(text){
+  const inventory = document.getElementById("inventoryList");
+
+  const item = document.createElement("li");
+
+  item.textContent = text;
+
+  inventory.appendChild(item);
+
+  popup.classList.add("hidden");
+}
+
+let paintingClickCount = 0;
+
+let pillowClicked = false;
+
+const pillow = document.getElementById("pillow");
+
+const painting = document.getElementById("painting");
+
+const popup = document.getElementById("popup");
+
+pillow.onclick = () => {
+    pillowClicked = true;
+};
+
+painting.onclick = () => {
+    if (pillowClicked === true) {
+        paintingClickCount++;
+    }
+
+    if (paintingClickCount >= 2) {
+        popup.classList.remove("hidden");
+    }
 };
