@@ -43,6 +43,12 @@ function addToInventory(text){
   popup.classList.add("hidden");
 }
 
+window.onload = function() {
+    setTimeout(() => {
+        document.getElementById("intro").classList.add("fade");
+    }, 1500);
+};
+
 let paintingClickCount = 0;
 
 let pillowClicked = false;
@@ -51,10 +57,14 @@ const pillow = document.getElementById("pillow");
 
 const painting = document.getElementById("painting");
 
-const popup = document.getElementById("popup");
+const popupClue = document.getElementById("popup-clue");
+
+const popupCode = document.getElementById("popup-code");
 
 pillow.onclick = () => {
     pillowClicked = true;
+
+    popupClue.classList.remove("hidden");
 };
 
 painting.onclick = () => {
@@ -63,6 +73,6 @@ painting.onclick = () => {
     }
 
     if (paintingClickCount >= 2) {
-        popup.classList.remove("hidden");
+        popupCode.classList.remove("hidden");
     }
 };

@@ -23,7 +23,40 @@ body{
     background-color: #f4f4f4;
 }
 
-/* Use the .room image as the full-page background */
+#intro {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  color: white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 48px;
+  z-index: 9999;
+
+  transition: opacity 3s ease;
+}
+
+#intro.fade {
+  opacity: 0;
+  pointer-events: none;
+}
+
+#intro h1 {
+  opacity: 0;
+  animation: titleFade 2s forwards;
+}
+
+@keyframes titleFade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
 .room {
   position: fixed;
   top: 0;

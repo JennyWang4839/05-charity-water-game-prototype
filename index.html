@@ -23,8 +23,6 @@
 
           <button id="painting"></button>
         </div>
-
-        <button onclick="nextRoom()">Go to Bedroom</button>
     </div>
 
     <button onclick="openInventory()" id="inventoryBtn">Inventory</button>
@@ -35,8 +33,16 @@
         <button onclick="closeInventory()">Close</button>
     </div>
 
-    <div id="popup" class="popup hidden">
-      <h3>You found a note!</h3>
+    <div id="popup-clue" class="popup hidden">
+      <h3>You found a clue!</h3>
+
+      <p>Code: World Water Day</p>
+
+      <button id="clue" onclick="document.getElementById('popup-clue').classList.add('hidden')">Close</button>
+    </div>
+
+    <div id="popup-code" class="popup hidden">
+      <h3>You found the code!</h3>
 
       <p>Code: World Water Day</p>
 
