@@ -14,12 +14,17 @@
 
         <p>Find clues to open the door.</p>
 
-        <img src="img/bedroom.png" alt="Bedroom" class="room-image">
+        <img src="img/bedroom.png" alt="Bedroom" class="room">
 
         <div class="objects">
-          <button onclick="inspect('chair')">Chair</button>
+          <button id="pillow" onclick="clickedPillow()"></button>
 
-          <button onclick="inspect('painting')">Painting</button>
+          <button id="painting" onclick="clickedPainting()"></button>
+
+          <div id="code" class="hidden">
+            Code is World Water Day
+          </div>
+
         </div>
 
         <button onclick="nextRoom()">Go to Bedroom</button>

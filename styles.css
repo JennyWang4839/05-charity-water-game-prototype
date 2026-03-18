@@ -23,8 +23,8 @@ body{
     background-color: #f4f4f4;
 }
 
-/* Use the .room-image image as the full-page background */
-.room-image {
+/* Use the .room image as the full-page background */
+.room {
   position: fixed;
   top: 0;
   left: 0;
@@ -35,13 +35,9 @@ body{
 }
 
 #room{ 
-  position:relative; 
-  width:800px; 
-  margin:auto; 
-} 
-
-#roomImage{ 
-  width:100%; 
+  position: relative; 
+  width: 800px; 
+  margin: auto; 
 } 
 
 .hotspot{ 
@@ -76,4 +72,43 @@ button{
   color: white;
   padding: 10px;
   font-family: Comic Sans MS, cursive, sans-serif;
+}
+
+#pillow {
+  position: absolute;
+  top: 56%;
+  left: 23%;
+  width: 9.8%;
+  height: 13%;
+  border-color: transparent;
+  background-color: transparent;
+}
+
+#painting {
+  position: absolute;
+  top: 17.5%;
+  left: 68.2%;
+  width: 9.2%;
+  height: 21%;
+  border-color: transparent;
+  background-color: transparent;
+}
+
+.hidden {
+  display: none;
+}
+
+#code {
+  position: absolute;
+  top: 40%;
+  left: 45%;
+  background: white;
+  padding: 10px;
+  border: 2px solid black;
+  animation: fall 0.6s ease-out;
+}
+
+@keyframes fall {
+  from { transform: translateY(-50px); }
+  to { transform: translateY(0); }
 }
