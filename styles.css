@@ -17,15 +17,35 @@ Secondary Colors:
 body{
     font-family: Comic Sans MS, cursive, sans-serif;
     text-align: center;
+    margin: 0;
+    padding: 0;
     background-color: #f4f4f4;
 }
 
-#room{
-    margin: 30px auto;
-    padding: 20px;
-    width: 400px;
-    background: white;
-    border-radius: 10px;
+/* Use the .room-image image as the full-page background */
+.room-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+#room{ 
+  position:relative; 
+  width:800px; 
+  margin:auto; 
+} 
+
+#roomImage{ 
+  width:100%; 
+} 
+
+.hotspot{ 
+  position:absolute; 
+  cursor:pointer; 
 }
 
 button{
