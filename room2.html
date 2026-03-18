@@ -12,21 +12,21 @@
       <h1>Charity Water Escape Room Game</h1>
     </div>
 
-    <div id="room1" class="room">
-        <h2>Bedroom</h2>
+    <div id="room2" class="room">
+        <h2>Bathroom</h2>
 
-        <p>Fluff and feathers, calm and white,</p>
+        <p>Where baths are drawn and water waits,</p>
 
-        <p>Lift what cushions sleep at night.</p>
+        <p>A bright yellow can holds hidden fates.</p>
 
-        <img src="img/bedroom.png" alt="Bedroom" class="room">
+        <img src="img/bathroom.png" alt="Bathroom" class="room">
 
         <div class="objects">
-          <button id="pillow"></button>
-
-          <button id="painting"></button>
+          <button id="jerryCan"></button>
 
           <button id="lock"></button>
+          
+          <button id="back" onclick="previousRoom()"></button>
         </div>
     </div>
 
@@ -35,6 +35,7 @@
     <div id="inventory">
         <h2>Inventory</h2>
         <ul id="inventoryList"></ul>
+        <li id="inventoryCode">Code: World Water Day</li>
     </div>
 
     <div id="popup-clue" class="popup hidden">
@@ -62,17 +63,9 @@
 
       <input type="text" id="codeInput" placeholder="Enter code">
 
-      <button id="submitCode" class="trans"onclick="checkCode(1)">Unlock</button>
+      <button id="submitCode" class="trans"onclick="checkCode(2)">Unlock</button>
 
       <button id="closeLock" class="trans" onclick="document.getElementById('popup-lock').classList.add('hidden')">Close</button>
-    </div>
-
-    <div id="popup-nextroom" class="hidden popup">
-      <h3>The lock opens!</h3>
-
-      <p>You step through the doorway into the next room.</p>
-
-      <button id="nextRoomBtn" class="trans" onclick="nextRoom()">Next Room</button>
     </div>
 
     <script src="script.js"></script>

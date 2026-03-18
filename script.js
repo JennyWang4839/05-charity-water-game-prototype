@@ -36,21 +36,31 @@ function addToInventory(text){
 function checkCode(input) {
   const codeInput = document.getElementById("codeInput").value;
 
-  if (input === 1 && codeInput === "0322") {
-      alert("Correct code! You've unlocked the next part of the game.");
+  const nextroomPopup = document.getElementById("popup-nextroom");
 
+  if (input === 1 && codeInput === "0322") {
       document.getElementById("popup-lock").classList.add("hidden");
+
+      nextroomPopup.classList.remove("hidden");
   }
 
   else if (input === 2 && codeInput === "0000") {
-    alert("Correct code! You've sucessfully escaped the room!");
-
     document.getElementById("popup-lock").classList.add("hidden");
+
+    alert("You have escaped!");
   }
 
   else {
       alert("Incorrect code. Please try again.");
   }
+}
+
+function nextRoom() {
+  window.location.href = "room2.html";
+}
+
+function previousRoom() {
+  window.location.href = "index.html";
 }
 
 window.onload = function() {
