@@ -13,3 +13,27 @@ Secondary Colors:
 - Pink:       #F16061
 
 */
+
+body{
+    font-family: Comic Sans MS, cursive, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+#room{
+    margin: 30px auto;
+    padding: 20px;
+    width: 400px;
+    background: white;
+    border-radius: 10px;
+}
+
+button{
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+#inventory{
+    list-style: none;
+}
