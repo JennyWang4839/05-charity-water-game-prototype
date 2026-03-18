@@ -16,6 +16,7 @@ Secondary Colors:
 
 body{
     font-family: Comic Sans MS, cursive, sans-serif;
+    color: white;
     text-align: center;
     margin: 0;
     padding: 0;
@@ -54,6 +55,25 @@ button{
     cursor: pointer;
 }
 
-#inventory{
-    list-style: none;
+#inventoryBtn {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    border: none;
+    cursor: pointer;
+    background-color: #D4AF37;
+    font-family: Comic Sans MS, cursive, sans-serif;
+}
+
+#inventory {
+  display: none;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 200px;
+  height: 100%;
+  background: rgb(99, 60, 2);
+  color: white;
+  padding: 10px;
+  font-family: Comic Sans MS, cursive, sans-serif;
 }

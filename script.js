@@ -2,10 +2,13 @@
 console.log('JavaScript file is linked correctly.');
 
 let inventory = []
+
 let keyFound = false
 
+const sidebar = document.getElementById("inventorySidebar");
+
 function updateInventory(){
-    let list = document.getElementById("inventory")
+    let list = document.getElementById("inventoryList")
     list.innerHTML = ""
 
     inventory.forEach(item =>{
@@ -55,3 +58,39 @@ function inspect(object){
 
     }
 }
+
+function updateInventory(){
+  let list = document.getElementById("inventoryList")
+  
+  list.innerHTML = ""
+
+  inventory.forEach(item =>{
+    let li = document.createElement("li")
+      li.textContent = item
+      list.appendChild(li)
+  })
+}
+
+function openInventory(){
+  const inventory = document.getElementById("inventory");
+
+  if (inventory.style.display === "none") {
+      inventory.style.display = "block";
+  } 
+  
+  else {
+      inventory.style.display = "none";
+  }
+}
+
+function closeInventory(){
+  const inventory = document.getElementById("inventory");
+  
+  if (inventory.style.display === "block") {
+      inventory.style.display = "none";
+  } 
+  
+  else {
+      inventory.style.display = "block";
+  }
+};
