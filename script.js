@@ -36,11 +36,13 @@ function addToInventory(text){
 
   const item = document.createElement("li");
 
+  const popupCode = document.getElementById("popup-code");
+
   item.textContent = text;
 
   inventory.appendChild(item);
 
-  popup.classList.add("hidden");
+  popupCode.classList.add("hidden");
 }
 
 window.onload = function() {

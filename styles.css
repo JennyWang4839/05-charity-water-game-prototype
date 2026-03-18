@@ -49,7 +49,7 @@ body{
 
 #intro h1 {
   opacity: 0;
-  animation: titleFade 2s forwards;
+  animation: titleFade 3s forwards;
 }
 
 @keyframes titleFade {
