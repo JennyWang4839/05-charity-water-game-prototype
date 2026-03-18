@@ -24,6 +24,8 @@
           <button id="pillow"></button>
 
           <button id="painting"></button>
+
+          <button id="lock"></button>
         </div>
     </div>
 
@@ -53,6 +55,16 @@
       <p>Code: World Water Day</p>
 
       <button id="collectCode" class="addToInventory" onclick="addToInventory('Code: World Water Day')">Take</button>
+    </div>
+
+    <div id="popup-lock" class="hidden popup">
+      <h3>Enter 4-Digit Code</h3>
+
+      <input type="text" id="codeInput" placeholder="Enter code">
+
+      <button id="submitCode" onclick="checkCode(1)">Unlock</button>
+
+      <button id="closeLock" onclick="document.getElementById('popup-lock').classList.add('hidden')">Close</button>
     </div>
 
     <script src="script.js"></script>

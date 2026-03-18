@@ -129,6 +129,17 @@ button{
   background-color: transparent;
 }
 
+#lock {
+  position: absolute;
+  top: 45%;
+  left: 89.8%;
+  width: 7.5%;
+  height: 22%;
+  cursor: default;
+  border-color: transparent;
+  background-color: transparent;
+}
+
 .hidden {
   display: none;
 }

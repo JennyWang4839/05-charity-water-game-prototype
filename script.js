@@ -45,6 +45,26 @@ function addToInventory(text){
   popupCode.classList.add("hidden");
 }
 
+function checkCode(input) {
+  const codeInput = document.getElementById("codeInput").value;
+
+  if (input === 1 && codeInput === "0322") {
+      alert("Correct code! You've unlocked the next part of the game.");
+
+      document.getElementById("popup-lock").classList.add("hidden");
+  }
+
+  else if (input === 2 && codeInput === "0000") {
+    alert("Correct code! You've sucessfully escaped the room!");
+
+    document.getElementById("popup-lock").classList.add("hidden");
+  }
+
+  else {
+      alert("Incorrect code. Please try again.");
+  }
+}
+
 window.onload = function() {
     setTimeout(() => {
         document.getElementById("intro").classList.add("fade");
@@ -59,9 +79,13 @@ const pillow = document.getElementById("pillow");
 
 const painting = document.getElementById("painting");
 
+const lock = document.getElementById("lock");
+
 const popupClue = document.getElementById("popup-clue");
 
 const popupCode = document.getElementById("popup-code");
+
+const popupLock = document.getElementById("popup-lock");
 
 pillow.onclick = () => {
     pillowClicked = true;
@@ -77,4 +101,8 @@ painting.onclick = () => {
     if (paintingClickCount >= 2) {
         popupCode.classList.remove("hidden");
     }
+};
+
+lock.onclick = () => {
+  popupLock.classList.remove("hidden");
 };
