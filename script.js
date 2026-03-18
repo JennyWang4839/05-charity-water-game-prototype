@@ -19,18 +19,6 @@ function openInventory(){
   }
 }
 
-function closeInventory(){
-  const inventory = document.getElementById("inventory");
-  
-  if (inventory.style.display === "block") {
-      inventory.style.display = "none";
-  } 
-  
-  else {
-      inventory.style.display = "block";
-  }
-};
-
 function addToInventory(text){
   const inventory = document.getElementById("inventoryList");
 

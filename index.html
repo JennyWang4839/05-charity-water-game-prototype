@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Charity Water Escape Room Game</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body>
     <div id="intro">
@@ -29,12 +30,11 @@
         </div>
     </div>
 
-    <button onclick="openInventory()" id="inventoryBtn">Inventory</button>
+    <button onclick="openInventory()" class="trans" id="inventoryBtn">Inventory</button>
 
     <div id="inventory">
         <h2>Inventory</h2>
         <ul id="inventoryList"></ul>
-        <button onclick="closeInventory()">Close</button>
     </div>
 
     <div id="popup-clue" class="popup hidden">
@@ -46,7 +46,7 @@
 
       <p>Two reveal the game.</p>
 
-      <button id="clue" onclick="document.getElementById('popup-clue').classList.add('hidden')">Close</button>
+      <button id="clue" class="trans" onclick="document.getElementById('popup-clue').classList.add('hidden')">Close</button>
     </div>
 
     <div id="popup-code" class="popup hidden">
@@ -54,7 +54,7 @@
 
       <p>Code: World Water Day</p>
 
-      <button id="collectCode" class="addToInventory" onclick="addToInventory('Code: World Water Day')">Take</button>
+      <button id="collectCode" class="trans" class="addToInventory" onclick="addToInventory('Code: World Water Day')">Take</button>
     </div>
 
     <div id="popup-lock" class="hidden popup">
@@ -62,9 +62,9 @@
 
       <input type="text" id="codeInput" placeholder="Enter code">
 
-      <button id="submitCode" onclick="checkCode(1)">Unlock</button>
+      <button id="submitCode" class="trans"onclick="checkCode(1)">Unlock</button>
 
-      <button id="closeLock" onclick="document.getElementById('popup-lock').classList.add('hidden')">Close</button>
+      <button id="closeLock" class="trans" onclick="document.getElementById('popup-lock').classList.add('hidden')">Close</button>
     </div>
 
     <script src="script.js"></script>
