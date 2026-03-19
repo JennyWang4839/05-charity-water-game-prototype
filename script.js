@@ -69,132 +69,38 @@ window.onload = function() {
     }, 1500);
 };
 
-function whichRoom() {
-  const currentURL = window.location.href;
-  
-  if (currentURL.includes("index.html")) {
-    return 1;
-  }
+let paintingClickCount = 0;
 
-  else if (currentURL.includes("room2.html")) {
-    return 2;
-  }
+let pillowClicked = false;
 
-  else {
-    return null;
-  }
-}
+const pillow = document.getElementById("pillow");
 
-if (whichRoom() === 1) {
-  let paintingClickCount = 0;
+const painting = document.getElementById("painting");
 
-  let pillowClicked = false;
+const lock = document.getElementById("lock");
 
-  const pillow = document.getElementById("pillow");
+const popupClue = document.getElementById("popup-clue");
 
-  const painting = document.getElementById("painting");
+const popupCode = document.getElementById("popup-code");
 
-  const lock = document.getElementById("lock");
+const popupLock = document.getElementById("popup-lock");
 
-  const popupClue = document.getElementById("popup-clue");
+pillow.onclick = () => {
+  pillowClicked = true;
 
-  const popupCode = document.getElementById("popup-code");
+  popupClue.classList.remove("hidden");
+};
 
-  const popupLock = document.getElementById("popup-lock");
-
-  pillow.onclick = () => {
-    pillowClicked = true;
-
-    popupClue.classList.remove("hidden");
-  };
-
-  painting.onclick = () => {
-      if (pillowClicked === true) {
-          paintingClickCount++;
-      }
-
-      if (paintingClickCount >= 2) {
-          popupCode.classList.remove("hidden");
-      }
-  };
-
-  lock.onclick = () => {
-    popupLock.classList.remove("hidden");
-  };
-}
-
-else {
-  const windowlock = document.getElementById("windowlock");
-
-  const popupLock = document.getElementById("popup-lock");
-
-  const jerrycan = document.getElementById("jerrycan");
-
-  const questions = [
-    {
-      question: "How much water can a jerry can carry?",
-      answers: ["20 liters", "5 liters", "50 liters"],
-      correct: "20 liters"
-    },
-    {
-      question: "How many people lack access to clean water?",
-      answers: ["500 million", "2 billion", "100 million"],
-      correct: "2 billion"
-    },
-    {
-      question: "How far do some people walk daily to collect water?",
-      answers: ["1 mile", "4 miles", "10 miles"],
-      correct: "4 miles"
-    }
-  ];
-
-  let currentQues = 0;
-
-  function showQuestion() {
-    const questionElement = document.getElementById("question");
-
-    const answerBtns = document.querySelectorAll(".answerBtn");
-
-    questionElement.textContent = questions[currentQues].question;
-    
-    answerBtns.forEach((btn) => {
-        btn.innerHTML = "";
-    });
-
-    answerBtns.forEach((btn, i) => {
-      btn.textContent = questions[currentQues].answers[i];
-    });
-  }
-
-  function checkAnswer(btn) {
-    const answer = btn.textContent;
-
-    if (answer === questions[currentQues].correct) {
-      currentQues++;
-
-      if (currentQues < questions.length) {
-        showQuestion();
-      }
-
-      else {
-        alert("You have answered all the questions! You found a key in the jerry can!");
-
-        addToInventory("Key");
-      }
+painting.onclick = () => {
+    if (pillowClicked === true) {
+        paintingClickCount++;
     }
 
-    else {
-      document.getElementById("triviaResult").textContent = "Incorrect! Please try again.";
+    if (paintingClickCount >= 2) {
+        popupCode.classList.remove("hidden");
     }
-  }
+};
 
-  windowlock.onclick = () => {
-    popupLock.classList.remove("hidden");
-  };
-
-  jerrycan.onclick = () => {
-    document.getElementById("popup-trivia").classList.remove("hidden");
-
-    showQuestion();
-  };
-}
+lock.onclick = () => {
+  popupLock.classList.remove("hidden");
+};
