@@ -118,14 +118,17 @@ function checkAnswer(btn) {
     currentQues++;
 
     if (currentQues < questions.length) {
+      document.getElementById("triviaResult").textContent = "";
+
       showQuestion();
     }
 
     else {
-      Knowledge reveals more than truth—
-Each answer holds a number of use.
-Gather them well, in the order you see,
-And the code will appear as the key.
+      document.getElementById("triviaResult").textContent = "";
+
+      document.getElementById("popup-trivia").classList.add("hidden");
+      
+      document.getElementById("popup-clue").classList.remove("hidden");
     }
   }
 
