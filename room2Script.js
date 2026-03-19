@@ -69,6 +69,12 @@ function previousRoom() {
   window.location.href = "index.html";
 }
 
+function closePopup() {
+  document.getElementById('popup-lock').classList.add('hidden');
+
+  document.getElementById('codeInput').value = "";
+}
+
 function resetGame() {
   inventory = [];
 
@@ -170,3 +176,5 @@ jerrycan.onclick = () => {
 
   showQuestion();
 };
+
+addToInventory("Code: World Water Day");

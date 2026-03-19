@@ -63,6 +63,12 @@ function previousRoom() {
   window.location.href = "index.html";
 }
 
+function closePopup() {
+  document.getElementById('popup-lock').classList.add('hidden');
+
+  document.getElementById('codeInput').value = "";
+}
+
 window.onload = function() {
     setTimeout(() => {
         document.getElementById("intro").classList.add("fade");
