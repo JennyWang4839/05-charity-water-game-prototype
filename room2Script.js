@@ -47,7 +47,13 @@ function checkCode(input) {
   else if (input === 2 && codeInput === "2024") {
     document.getElementById("popup-lock").classList.add("hidden");
 
-    alert("You have escaped!");
+    confetti({
+      particleCount: 150,
+      spread: 90,
+      origin: { y: 0.6 }
+    });
+
+    document.getElementById("popup-congrats").classList.remove("hidden");
   }
 
   else {
