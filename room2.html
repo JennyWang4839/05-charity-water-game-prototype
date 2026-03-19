@@ -22,9 +22,9 @@
         <img src="img/bathroom.png" alt="Bathroom" class="room">
 
         <div class="objects">
-          <button id="jerryCan"></button>
+          <button id="jerrycan"></button>
 
-          <button id="lock"></button>
+          <button id="windowlock"></button>
           
           <button id="back" onclick="previousRoom()"></button>
         </div>
@@ -38,24 +38,16 @@
         <li id="inventoryCode">Code: World Water Day</li>
     </div>
 
-    <div id="popup-clue" class="popup hidden">
-      <h3>You found a clue!</h3>
+    <div id="popup-lock" class="hidden popup">
+      <p id="question"></p>
 
-      <p>A picture hides more than paint and frame.</p>
+      <div id="answers">
+        <button class="answerBtn" onclick="checkAnswer(this)"></button>
+        <button class="answerBtn" onclick="checkAnswer(this)"></button>
+        <button class="answerBtn" onclick="checkAnswer(this)"></button>
+      </div>
 
-      <p>One touch wakes it,</p>
-
-      <p>Two reveal the game.</p>
-
-      <button id="clue" class="trans" onclick="document.getElementById('popup-clue').classList.add('hidden')">Close</button>
-    </div>
-
-    <div id="popup-code" class="popup hidden">
-      <h3>You found the code!</h3>
-
-      <p>Code: World Water Day</p>
-
-      <button id="collectCode" class="trans" class="addToInventory" onclick="addToInventory('Code: World Water Day')">Take</button>
+      <p id="triviaResult"></p>
     </div>
 
     <div id="popup-lock" class="hidden popup">

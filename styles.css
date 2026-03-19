@@ -232,3 +232,39 @@ button {
   transform: translate(4px, 4px);
   box-shadow: none;
 }
+
+#back {
+  position: absolute;
+  top: 54%;
+  left: 12.8%;
+  width: 1.6%;
+  height: 8.2%;
+  cursor: default;
+  box-shadow: none;
+  border-color: transparent;
+  background-color: transparent;
+}
+
+#windowlock {
+  position: absolute;
+  top: 34%;
+  left: 59.3%;
+  width: 4%;
+  height: 9%;
+  cursor: default;
+  box-shadow: none;
+  border-color: transparent;
+  background-color: transparent;
+}
+
+#jerrycan {
+  position: absolute;
+  top: 77%;
+  left: 67%;
+  width: 7.2%;
+  height: 17.4%;
+  cursor: default;
+  box-shadow: none;
+  border-color: transparent;
+  background-color: transparent;
+}
