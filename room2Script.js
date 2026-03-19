@@ -122,9 +122,10 @@ function checkAnswer(btn) {
     }
 
     else {
-      alert("You have answered all the questions! You found a key in the jerry can!");
-
-      addToInventory("Key");
+      Knowledge reveals more than truth—
+Each answer holds a number of use.
+Gather them well, in the order you see,
+And the code will appear as the key.
     }
   }
 
