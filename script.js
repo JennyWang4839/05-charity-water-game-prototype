@@ -132,19 +132,19 @@ else {
 
   const questions = [
     {
+      question: "How much water can a jerry can carry?",
+      answers: ["20 liters", "5 liters", "50 liters"],
+      correct: "20 liters"
+    },
+    {
       question: "How many people lack access to clean water?",
       answers: ["500 million", "2 billion", "100 million"],
-      correct: 1
+      correct: "2 billion"
     },
     {
       question: "How far do some people walk daily to collect water?",
       answers: ["1 mile", "4 miles", "10 miles"],
-      correct: 1
-    },
-    {
-      question: "How much water can a jerry can carry?",
-      answers: ["20 liters", "5 liters", "50 liters"],
-      correct: 0
+      correct: "4 miles"
     }
   ];
 
