@@ -193,7 +193,7 @@ else {
   };
 
   jerrycan.onclick = () => {
-    document.getElementById("triviaPopup").classList.remove("hidden");
+    document.getElementById("popup-trivia").classList.remove("hidden");
 
     showQuestion();
   };
